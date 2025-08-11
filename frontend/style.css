@@ -1,0 +1,81 @@
+/* Reset some defaults */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container centered and nicely spaced */
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f7f9fc;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Textarea styling */
+textarea#userInput {
+  width: 100%;
+  min-height: 140px;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+textarea#userInput:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+/* Button styling */
+button#sendBtn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button#sendBtn:hover {
+  background-color: #357abd;
+}
+
+/* Response box styling */
+#responseBox {
+  margin-top: 25px;
+  min-height: 80px;
+  padding: 15px;
+  background: #e9f0fb;
+  border-radius: 8px;
+  border: 1px solid #c3d1f1;
+  color: #222;
+  font-size: 1rem;
+  white-space: pre-wrap; /* preserves line breaks */
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .container {
+    margin: 20px 15px;
+    padding: 15px;
+  }
+}

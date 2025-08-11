@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI WebApp</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>AI Assistant</h1>
+        <textarea
+            id="userInput"
+            placeholder="Enter text to be summarized..."
+            aria-label="Input text"
+        ></textarea>
+        <button id="sendBtn" aria-label="Send input for summarization">Send</button>
+        <div
+            id="responseBox"
+            role="region"
+            aria-live="polite"
+            aria-label="Summarized response"
+        ></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
