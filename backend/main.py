@@ -3,13 +3,15 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from llm.llm_handler import LLMHandler
+from helpers.cloudflare import run_cloudflare_tunnel
 import uvicorn
 import os
 
 # Initialize FastAPI app
 app = FastAPI(title="Local LLM API")
 url = "https://your-trycloudflare-subdomain.trycloudflare.com"
-url = input("Enter the URL of your frontend: ")
+url = run_cloudflare_tunnel()
+print(url)
 origins = [
     "http://127.0.0.1:5000",  # Your frontend URL (change accordingly)
     url,
