@@ -8,11 +8,18 @@ import os
 
 # Initialize FastAPI app
 app = FastAPI(title="Local LLM API")
+url = "https://your-trycloudflare-subdomain.trycloudflare.com"
+url = input("Enter the URL of your frontend: ")
+origins = [
+    "http://127.0.0.1:5000",  # Your frontend URL (change accordingly)
+    url,
+    # Add any other allowed origins
+]
 
 # Enable CORS for frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5500"],  # Or specify ["http://localhost:5500"] if using Live Server
+    allow_origins=["*"],  # Or specify ["http://localhost:5500"] if using Live Server
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
