@@ -9,7 +9,6 @@ import os
 
 # Initialize FastAPI app
 app = FastAPI(title="Local LLM API")
-url = "https://your-trycloudflare-subdomain.trycloudflare.com"
 url = run_cloudflare_tunnel()
 print(url)
 origins = [
